@@ -8,7 +8,7 @@ class Player implements Serializable {
     String name, lastName, rut, email, phone
 
     PlayerDTO toDTO() {
-        def playerDTO = new PlayerDTO();
+        PlayerDTO playerDTO = new PlayerDTO();
         playerDTO.id = this.id
         playerDTO.name = this.name
         playerDTO.lastName = this.lastName
@@ -17,4 +17,5 @@ class Player implements Serializable {
         playerDTO.phone = this.phone
         playerDTO
     }
+
 }

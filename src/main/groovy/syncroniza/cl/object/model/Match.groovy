@@ -9,7 +9,7 @@ class Match implements Serializable {
     Date date
 
     MatchDTO toDTO() {
-        def matchDTO = new MatchDTO();
+        MatchDTO matchDTO = new MatchDTO();
         matchDTO.id = this.id
         matchDTO.totalAmount = this.totalAmount
         matchDTO.fieldName = this.fieldName
