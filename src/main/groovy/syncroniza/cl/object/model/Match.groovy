@@ -2,9 +2,8 @@ package syncroniza.cl.object
 
 class Match implements Serializable {
 
-    int id
+    int id, totalAmount
     String fieldName
     Date date
-    int totalAmount
 
 }

@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Param
 @Mapper
 interface PlayerMapper {
 
-    @Insert("insert into users (id, name, lastName, rut, email, phone) values (#{id}, #{name}, #{lastName}, #{rut}, #{email}, #{phone} )")
-    void create(@Param("id") Integer id,
+    @Insert("insert into player (id, name, lastName, rut, email, phone) values (#{id}, #{name}, #{lastName}, #{rut}, #{email}, #{phone} )")
+    void create(@Param("id") int id,
         @Param("name") String name,
         @Param("lastName") String lastName,
         @Param("rut") String rut,

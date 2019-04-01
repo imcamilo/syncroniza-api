@@ -5,19 +5,19 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import syncroniza.cl.object.dto.PlayerDTO
-import syncroniza.cl.object.service.PlayerService
+import syncroniza.cl.object.dto.MatchDTO
+import syncroniza.cl.object.service.MatchService
 
 @RestController
-@RequestMapping("/api/v1/players")
-class PlayerController {
+@RequestMapping("/api/v1/matchs")
+class MatchController {
 
     @Autowired
-    private PlayerService playerService
+    private MatchService matchService
 
     @PostMapping
-    def create(@RequestBody PlayerDTO playerDTO) {
-        playerService.create(playerDTO)
+    def create(@RequestBody MatchDTO matchDTO) {
+        matchService.create(matchDTO)
     }
 
 }
