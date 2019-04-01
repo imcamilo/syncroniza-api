@@ -1,23 +1,24 @@
 drop table if exists player;
-drop table if exists matchPlayer;
 drop table if exists match;
+drop table if exists match_player;
 
 create table player(id int primary key auto_increment,
                     name varchar,
-                    lastName varchar,
+                    last_name varchar,
                     rut varchar,
                     email varchar,
                     phone varchar);
 
 create table match(id int primary key auto_increment,
-                    fieldName varchar,
+                    field_name varchar,
                     date varchar,
-                    totalAmount varchar);
+                    total_amount varchar);
 
-create table matchPlayer(id int primary key auto_increment,
-                    playerId integer,
-                    matchId integer,
-                    paid boolean);
+create table match_player(id int primary key auto_increment,
+                    player_id integer,
+                    match_id integer,
+                    paid boolean,
+                    participation boolean);
 
-alter table matchPlayer add foreign key(playerId) references player(id);
-alter table matchPlayer add foreign key(matchId) references match(id);
+alter table match_player add foreign key(player_id) references player(id);
+alter table match_player add foreign key(match_id) references match(id);

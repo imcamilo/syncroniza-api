@@ -7,10 +7,10 @@ import org.apache.ibatis.annotations.Param
 @Mapper
 interface MatchMapper {
 
-    @Insert("insert into match (id, fieldName, date, totalAmount) values (#{id}, #{fieldName}, #{date}, #{totalAmount} )")
+    @Insert("insert into match (id, field_name, date, total_amount) values (#{id}, #{field_name}, #{date}, #{total_amount} )")
     void create(@Param("id") int id,
-        @Param("fieldName") String fieldName,
+        @Param("field_name") String fieldName,
         @Param("date") String date,
-        @Param("totalAmount") int totalAmount)
+        @Param("total_amount") int totalAmount)
 
 }
