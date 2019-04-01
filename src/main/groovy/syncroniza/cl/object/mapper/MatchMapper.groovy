@@ -3,6 +3,7 @@ package syncroniza.cl.object.mapper
 import org.apache.ibatis.annotations.Insert
 import org.apache.ibatis.annotations.Mapper
 import org.apache.ibatis.annotations.Param
+import org.apache.ibatis.annotations.Select
 
 @Mapper
 interface MatchMapper {
@@ -11,4 +12,8 @@ interface MatchMapper {
     void create(@Param("field_name") String fieldName,
         @Param("date") String date,
         @Param("total_amount") int totalAmount)
+
+    @Select("select * from match offset #{offset} limit #{limit}")
+    def listMatchs(@Param("offset") int offset, @Param("limit") int limit)
+
 }
