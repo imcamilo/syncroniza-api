@@ -2,9 +2,11 @@ package syncroniza.cl.object.util
 
 import syncroniza.cl.object.dto.MatchDTO
 import syncroniza.cl.object.dto.MatchPlayerDTO
+import syncroniza.cl.object.dto.MoneyDTO
 import syncroniza.cl.object.dto.PlayerDTO
 import syncroniza.cl.object.model.Match
 import syncroniza.cl.object.model.MatchPlayer
+import syncroniza.cl.object.model.Money
 import syncroniza.cl.object.model.Player
 
 class DTOMapper {
@@ -49,6 +51,17 @@ class DTOMapper {
         MatchPlayer mPlayer = new MatchPlayer();
         toEntity(mPlayerDTO, mPlayer);
         mPlayer;
+    }
+    static void toEntity(MoneyDTO moneyDTO, Money money) {
+        money.id = moneyDTO.id
+        money.playerId = moneyDTO.playerId
+        money.totalAmount = moneyDTO.totalAmount
+    }
+
+    static Money toEntity(MoneyDTO moneyDTO) {
+        Money money = new Money();
+        toEntity(moneyDTO, money);
+        money;
     }
 
 }

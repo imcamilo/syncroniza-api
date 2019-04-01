@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import syncroniza.cl.object.dto.MoneyDTO
 import syncroniza.cl.object.dto.PlayerDTO
 import syncroniza.cl.object.service.PlayerService
 
@@ -18,6 +19,11 @@ class PlayerController {
     @PostMapping
     def create(@RequestBody PlayerDTO playerDTO) {
         playerService.create(playerDTO)
+    }
+
+    @PostMapping("/money")
+    def addMoney(@RequestBody MoneyDTO moneyDTO) {
+        playerService.addMoney(moneyDTO)
     }
 
 }
