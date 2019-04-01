@@ -14,8 +14,8 @@ class PlayerServiceImp implements PlayerService {
     PlayerMapper playerMapper
 
     def create(PlayerDTO playerDTO) {
-        Player plyr = DTOMapper.toEntity(playerDTO)
-        playerMapper.create(plyr.id, plyr.name, plyr.lastName, plyr.rut, plyr.email, plyr.phone)
+        Player player = DTOMapper.toEntity(playerDTO)
+        playerMapper.create(player.name, player.lastName, player.rut, player.email, player.phone)
     }
 
 }
