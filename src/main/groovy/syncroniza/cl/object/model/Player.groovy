@@ -1,4 +1,4 @@
-package syncroniza.cl.object
+package syncroniza.cl.object.model
 
 import syncroniza.cl.object.dto.PlayerDTO
 

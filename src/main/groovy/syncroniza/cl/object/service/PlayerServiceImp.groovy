@@ -2,7 +2,7 @@ package syncroniza.cl.object.service
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import syncroniza.cl.object.Player
+import syncroniza.cl.object.model.Player
 import syncroniza.cl.object.dto.PlayerDTO
 import syncroniza.cl.object.mapper.PlayerMapper
 import syncroniza.cl.object.util.DTOMapper

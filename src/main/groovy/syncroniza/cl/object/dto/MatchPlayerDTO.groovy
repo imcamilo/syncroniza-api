@@ -2,7 +2,8 @@ package syncroniza.cl.object.dto
 
 class MatchPlayerDTO {
 
-    int id
-    boolean paid
+    int id, matchId, playerId
+    boolean paid, participation
+
 
 }
