@@ -17,7 +17,7 @@ class PlayerController {
 
     @PostMapping
     def create(@RequestBody PlayerDTO playerDTO) {
-        playerService.create(playerService)
+        playerService.create(playerDTO)
     }
 
 }
