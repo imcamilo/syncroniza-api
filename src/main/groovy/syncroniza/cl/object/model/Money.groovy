@@ -4,13 +4,13 @@ import syncroniza.cl.object.dto.MoneyDTO
 
 class Money implements Serializable {
 
-    int id, playerId, totalAmount
+    int id, player_id, total_amount
 
     MoneyDTO toDTO() {
         MoneyDTO moneyDTO = new MoneyDTO();
         moneyDTO.id = this.id
-        moneyDTO.playerId = this.playerId
-        moneyDTO.totalAmount = this.totalAmount
+        moneyDTO.playerId = this.player_id
+        moneyDTO.totalAmount = this.total_amount
         moneyDTO
     }
 

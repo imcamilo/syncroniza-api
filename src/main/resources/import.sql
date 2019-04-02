@@ -42,3 +42,31 @@ insert into player (name, last_name, rut, email, phone) values ('f','vallejos', 
 insert into player (name, last_name, rut, email, phone) values ('p','quintanilla', '3-3431320', 'quintanilla@gmail.com', '12');
 insert into player (name, last_name, rut, email, phone) values ('f','mansilla', '3-6451320', 'mansilla@gmail.com', '12');
 insert into player (name, last_name, rut, email, phone) values ('a','jorquera', '3-3461320', 'jorquera@outlook.com', '12');
+
+insert into money (player_id, total_amount) values (1, 5000);
+insert into money (player_id, total_amount) values (2, 12000);
+insert into money (player_id, total_amount) values (3, 13000);
+insert into money (player_id, total_amount) values (4, 40000);
+insert into money (player_id, total_amount) values (1, 2500);
+insert into money (player_id, total_amount) values (1, 2500);
+
+insert into match (field_name, date, total_amount) values ('FEN', null, 43000);
+insert into match (field_name, date, total_amount) values ('ABC', null, 43000);
+insert into match (field_name, date, total_amount) values ('DEF', null, 53000);
+insert into match (field_name, date, total_amount) values ('GHI', null, 43000);
+insert into match (field_name, date, total_amount) values ('JKL', null, 40000);
+insert into match (field_name, date, total_amount) values ('MNO', null, 42000);
+insert into match (field_name, date, total_amount) values ('PQR', null, 42000);
+
+insert into match_player (player_id, match_id, paid, participation) values (1, 1, true, true);
+insert into match_player (player_id, match_id, paid, participation) values (2, 1, true, true);
+insert into match_player (player_id, match_id, paid, participation) values (3, 1, true, true);
+insert into match_player (player_id, match_id, paid, participation) values (4, 1, false, true);
+insert into match_player (player_id, match_id, paid, participation) values (5, 1, false, true);
+insert into match_player (player_id, match_id, paid, participation) values (6, 1, false, true);
+insert into match_player (player_id, match_id, paid, participation) values (7, 1, false, true);
+insert into match_player (player_id, match_id, paid, participation) values (1, 2, false, true);
+insert into match_player (player_id, match_id, paid, participation) values (2, 2, false, true);
+insert into match_player (player_id, match_id, paid, participation) values (9, 2, false, true);
+
+

@@ -21,13 +21,13 @@ class MatchServiceImp implements MatchService {
 
     def create(MatchDTO matchDTO) {
         Match match = DTOMapper.toEntity(matchDTO)
-        matchMapper.create(match.fieldName, match.date.toString(), match.totalAmount)
+        matchMapper.create(match.field_name, match.date.toString(), match.total_amount)
     }
 
     def addPlayer(MatchPlayerDTO matchPlayerDTO) {
         MatchPlayer matchPlayer = DTOMapper.toEntity(matchPlayerDTO)
-        matchPlayerMapper.create(matchPlayer.playerId,
-                matchPlayer.matchId,
+        matchPlayerMapper.create(matchPlayer.player_id,
+                matchPlayer.match_id,
                 matchPlayer.paid,
                 matchPlayer.participation)
     }

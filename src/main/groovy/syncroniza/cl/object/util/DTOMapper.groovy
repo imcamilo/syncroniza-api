@@ -14,7 +14,7 @@ class DTOMapper {
     static void toEntity(PlayerDTO playerDTO, Player player) {
         player.id = playerDTO.id
         player.name = playerDTO.name
-        player.lastName = playerDTO.lastName
+        player.last_name = playerDTO.lastName
         player.rut = playerDTO.rut
         player.email = playerDTO.email
         player.phone = playerDTO.phone
@@ -28,9 +28,9 @@ class DTOMapper {
 
     static void toEntity(MatchDTO matchDTO, Match match) {
         match.id = matchDTO.id
-        match.fieldName = matchDTO.fieldName
+        match.field_name = matchDTO.fieldName
         match.date = matchDTO.date
-        match.totalAmount = matchDTO.totalAmount
+        match.total_amount = matchDTO.totalAmount
     }
 
     static Match toEntity(MatchDTO matchDTO) {
@@ -41,8 +41,8 @@ class DTOMapper {
 
     static void toEntity(MatchPlayerDTO mPlayerDTO, MatchPlayer mPlayer) {
         mPlayer.id = mPlayerDTO.id
-        mPlayer.matchId = mPlayerDTO.matchId
-        mPlayer.playerId = mPlayerDTO.playerId
+        mPlayer.match_id = mPlayerDTO.matchId
+        mPlayer.player_id = mPlayerDTO.playerId
         mPlayer.paid = mPlayerDTO.paid
         mPlayer.participation = mPlayerDTO.participation
     }
@@ -54,8 +54,8 @@ class DTOMapper {
     }
     static void toEntity(MoneyDTO moneyDTO, Money money) {
         money.id = moneyDTO.id
-        money.playerId = moneyDTO.playerId
-        money.totalAmount = moneyDTO.totalAmount
+        money.player_id = moneyDTO.playerId
+        money.total_amount = moneyDTO.totalAmount
     }
 
     static Money toEntity(MoneyDTO moneyDTO) {

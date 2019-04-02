@@ -2,6 +2,7 @@ package syncroniza.cl.object.service
 
 import syncroniza.cl.object.dto.MoneyDTO
 import syncroniza.cl.object.dto.PlayerDTO
+import syncroniza.cl.object.dto.PlayerDetailDTO
 
 interface PlayerService {
 
@@ -9,8 +10,10 @@ interface PlayerService {
 
     def addMoney(MoneyDTO moneyDTO)
 
-    List<PlayerDTO> playerList(int offset, int limit)
+    List<PlayerDetailDTO> playerList(int offset, int limit)
 
     PlayerDTO getPlayer(int id)
+
+    List<PlayerDTO> matchPlayers(int matchId)
 
 }
