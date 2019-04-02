@@ -9,4 +9,8 @@ interface PlayerService {
 
     def addMoney(MoneyDTO moneyDTO)
 
+    List<PlayerDTO> playerList(int offset, int limit)
+
+    PlayerDTO getPlayer(int id)
+
 }

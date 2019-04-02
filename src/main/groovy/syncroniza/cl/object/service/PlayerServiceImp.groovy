@@ -29,4 +29,13 @@ class PlayerServiceImp implements PlayerService {
         moneyMapper.add(money.playerId, money.totalAmount)
     }
 
+    List<PlayerDTO> playerList(int offset, int limit) {
+        List<Player> playerList = playerMapper.playerList(offset, limit)
+        playerList.stream().map{s -> s.toDTO()}.collect()
+    }
+
+    PlayerDTO getPlayer(int id) {
+        playerMapper.getPlayer(id).toDTO()
+    }
+
 }
