@@ -32,4 +32,13 @@ class MatchServiceImp implements MatchService {
                 matchPlayer.participation)
     }
 
+    List<MatchDTO> matchListWithNumberOfPlayers(int offset, int limit) {
+        List<Match> listOfMatches = matchMapper.matchListWithNumberOfPlayers(offset, limit)
+        listOfMatches.stream().map{match -> match.toDTO()}.collect()
+    }
+
+    MatchDTO getMatch(int id) {
+        matchMapper.getMatch(id).toDTO()
+    }
+
 }

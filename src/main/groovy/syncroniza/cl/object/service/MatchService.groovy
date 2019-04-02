@@ -9,4 +9,8 @@ interface MatchService {
 
     def addPlayer(MatchPlayerDTO matchPlayerDTO)
 
+    List<MatchDTO> matchListWithNumberOfPlayers(int offset, int limit)
+
+    MatchDTO getMatch(int id)
+
 }

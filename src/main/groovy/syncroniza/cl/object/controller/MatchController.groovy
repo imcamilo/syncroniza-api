@@ -24,17 +24,28 @@ class MatchController {
 
     @PostMapping
     def create(@RequestBody MatchDTO matchDTO) {
-        matchService.create(matchDTO)
+        matchService.create matchDTO
     }
 
     @PostMapping("/players")
     def addPlayer(@RequestBody MatchPlayerDTO matchPlayerDTO) {
-        matchService.addPlayer(matchPlayerDTO)
+        matchService.addPlayer matchPlayerDTO
     }
 
     @GetMapping("/{id}/players")
     def matchPlayers(@PathVariable int id) {
-        playerService.matchPlayers(id)
+        playerService.matchPlayers id
+    }
+
+    @GetMapping
+    def matchesWithNumberOfPlayers() {
+        //TODO page, pagination
+        matchService.matchListWithNumberOfPlayers(0, 20)
+    }
+
+    @GetMapping("/{id}")
+    def getMatch(@PathVariable int id) {
+        matchService.getMatch id
     }
 
 }

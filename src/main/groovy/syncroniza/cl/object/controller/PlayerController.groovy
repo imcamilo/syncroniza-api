@@ -20,17 +20,17 @@ class PlayerController {
 
     @PostMapping
     def create(@RequestBody PlayerDTO playerDTO) {
-        playerService.create(playerDTO)
+        playerService.create playerDTO
     }
 
     @PostMapping("/money")
     def addMoney(@RequestBody MoneyDTO moneyDTO) {
-        playerService.addMoney(moneyDTO)
+        playerService.addMoney moneyDTO
     }
 
     @GetMapping("/{id}")
     def getPlayer(@PathVariable int id) {
-        playerService.getPlayer(id)
+        playerService.getPlayer id
     }
 
     @GetMapping
