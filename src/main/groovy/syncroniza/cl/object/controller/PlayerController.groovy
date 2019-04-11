@@ -1,6 +1,7 @@
 package syncroniza.cl.object.controller
 
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -11,6 +12,7 @@ import syncroniza.cl.object.dto.MoneyDTO
 import syncroniza.cl.object.dto.PlayerDTO
 import syncroniza.cl.object.service.PlayerService
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/v1/players")
 class PlayerController {
